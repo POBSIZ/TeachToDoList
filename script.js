@@ -1,8 +1,5 @@
 function getList() {
-    const listString = window.localStorage.getItem('list');
-    const toDoListArr = JSON.parse(listString);
-    const toDoList = toDoListArr || [];
-    return toDoList
+    return JSON.parse(localStorage.getItem('list')) || [];
 }
 
 function getInputText() {
@@ -18,12 +15,8 @@ function clearInputText() {
 function removeToDo(id) {
     const toDo = document.querySelector(`#o${id}`);
     toDo.remove();
-    
-    let toDoList = getList();
-    const list = toDoList.filter(item => item.id !== id);
-
-    const toDoListString = JSON.stringify(list);
-    window.localStorage.setItem('list', toDoListString);
+    const list = getList().filter(item => item.id !== id);
+    localStorage.setItem('list', JSON.stringify(list));
 }
 
 function addToDo(text, id) {
@@ -33,9 +26,8 @@ function addToDo(text, id) {
     item.className = 'item';
     item.id = `o${id}`;
 
-    const checkCircle = document.createElement('div');
+    const checkCircle = document.createElement('button');
     checkCircle.className = 'check-circle';
-    checkCircle.id = `i${id}`;
 
     const innerText = document.createElement('p');
     innerText.className = 'text';
@@ -51,34 +43,26 @@ function addToDo(text, id) {
 
 function addAction(lastId) {
     let toDoList = getList();
-
-    toDoList.push({
-      id: lastId + 1,
-      text: getInputText()
-    });
-
-    addToDo(getInputText(), lastId + 1);
+    toDoList.push({ id: lastId, text: getInputText() });
+    addToDo(getInputText(), lastId);
     clearInputText();
-  
-    const toDoListString = JSON.stringify(toDoList);
-    window.localStorage.setItem('list', toDoListString);
+    localStorage.setItem('list', JSON.stringify(toDoList));
 }
 
 function init() {
-  let lastId = Number(window.localStorage.getItem('lastId'));
+  let lastId = Number(localStorage.getItem('lastId'));
   if(!lastId) {
-    window.localStorage.setItem('lastId', 0);
+    localStorage.setItem('lastId', 0);
     lastId = 0;
   }
   
-  const toDoList = getList();
-  toDoList.forEach(elem => addToDo(elem.text, elem.id));
+  getList().forEach(elem => addToDo(elem.text, elem.id));
   
   const addButton = document.querySelector('.add_button');
   addButton.addEventListener('click', () => {
-    addAction(lastId);
     lastId += 1;
-    window.localStorage.setItem('lastId', lastId + 1);
+    addAction(lastId);
+    localStorage.setItem('lastId', lastId);
   });
 }
 
