@@ -1,0 +1,124 @@
+:root {
+    --black: #0A0A0A;
+    --green: #2ECC71;
+}
+
+* {
+    box-sizing: border-box;
+    color: var(--black);
+
+    font-size: 16px;
+}
+
+body, html, ul, li, input, h1, p {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+/* Frame */
+#app {
+    max-width: 480px;
+    min-height: 100vh;
+
+    margin: auto;
+    padding: 40px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 0px 14px rgba(90, 90, 90, 0.25);
+}
+
+
+/* Title */
+.title {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 20px 0px 40px 0;
+}
+
+
+/* Add Section */
+.add_section {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.add_section .text_input {
+    width: 342px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 2px solid var(--black);
+    box-shadow: 0px 2px 8px rgba(90, 90, 90, 0.25);
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.add_section .add_button {
+    cursor: pointer;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    justify-content: center;
+
+    background: var(--green);
+    border: 2px solid var(--black);
+    box-shadow: 0px 2px 8px rgba(90, 90, 90, 0.25);
+    border-radius: 16px;
+}
+
+.add_section .add_button .plus {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+
+/* List */
+.list {
+    width: 100%;
+    margin-top: 40px;
+
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+}
+
+.item {
+    background: #FFFFFF;
+    border: 2px solid #0A0A0A;
+    border-radius: 16px;
+    box-shadow: 0px 4px 4px rgba(90, 90, 90, 0.25);
+
+    padding: 16px;
+
+    display: flex;
+    gap: 10px;
+}
+
+.check-circle {
+    cursor: pointer;
+
+    width: 28px;
+    height: 28px;
+
+    border: 2px solid #B9B9B9;
+    border-radius: 100px;
+
+    display: flex;
+    justify-content: center;
+    flex: none;
+}
+
+.check-circle:hover{
+    border: 2px solid var(--black);
+    background-color: var(--green);
+}
