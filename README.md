@@ -6,8 +6,8 @@
 3. JAVASCRIPT
 
 ### HTML
-1. [Basic Tag](https://github.com/POBSIZ/TeachToDoList/edit/master/README.md#html---basic-tag)
-2. [class & id]()
+1. [Basic Tag](https://github.com/POBSIZ/TeachToDoList#html---basic-tag)
+2. [class & id](https://github.com/POBSIZ/TeachToDoList#html---class--id)
 3. [Structuring]()
 
 ### CSS
@@ -134,10 +134,10 @@ html 문서의 핵심 부분이며 이곳에 우리가 만들 페이지들에 �
 ```
 
 ## HTML - class & id
+class 와 id는 태그들을 식별 할 수 있는 이름을 붙이기 위해 사용된다.
+이름을 붙이는 이유는 JS 혹은 CSS에서 class 또는 id명으로 객체를 지정해 스타일과 기능들을 지정하기 위해서이다.
 
 ### class
-class는 태그들을 식별 할 수 있는 이름을 붙이는 것 이다.  
-사용 이유는 JS 혹은 CSS에서 class명으로 객체를 지정해 스타일 기능들을 지정하기 위해서이다.
 class는 여러 태그에 지정 할 수 있다.
 
 ```html
@@ -151,3 +151,33 @@ class는 여러 태그에 지정 할 수 있다.
 </main>
 ...
 ```
+
+### id
+id는 한 태그에만 지정 할 수 있다.
+
+```html
+...
+<main>
+  <ul id="list">
+    <li class="item">1</li>
+    <li class="item">2</li>
+    <li class="item">3</li>
+  </ul>
+</main>
+...
+```
+
+## HTML - Structuring
+html로 구조를 짜기 위해선 만들 페이지의 디자인을 보고 그에 맞춰 짜야한다.
+
+> 아래 이미지와 같이 테두리를 치며 구조를 시각화 할 수 있다.
+
+- before
+  
+![image](https://github.com/POBSIZ/TeachToDoList/assets/65818008/bb3ff380-64ec-4ad1-9032-f8fbd1c17fc6)
+
+- after
+  
+![image](https://github.com/POBSIZ/TeachToDoList/assets/65818008/06952376-f20c-4743-84c5-845473de1689)
+
+- 시각화된 구조를 바탕으로 작성한 html 코드
