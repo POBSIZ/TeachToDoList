@@ -23,9 +23,9 @@
 
 ### etc
 1. [WEB VSCODE](https://vscode.dev/)
-
-</br>
-
+  
+  
+  
 ## HTML - Basic Tag
 
 ### head
@@ -131,4 +131,23 @@ html 문서의 핵심 부분이며 이곳에 우리가 만들 페이지들에 �
 
 ```html
 <button onclick="foo()">Click!</button>
+```
+
+## HTML - class & id
+
+### class
+class는 태그들을 식별 할 수 있는 이름을 붙이는 것 이다.  
+사용 이유는 JS 혹은 CSS에서 class명으로 객체를 지정해 스타일 기능들을 지정하기 위해서이다.
+class는 여러 태그에 지정 할 수 있다.
+
+```html
+...
+<main>
+  <ul>
+    <li class="item">1</li>
+    <li class="item">2</li>
+    <li class="item">3</li>
+  </ul>
+</main>
+...
 ```
