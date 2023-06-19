@@ -181,3 +181,34 @@ html로 구조를 짜기 위해선 만들 페이지의 디자인을 보고 그�
 ![image](https://github.com/POBSIZ/TeachToDoList/assets/65818008/06952376-f20c-4743-84c5-845473de1689)
 
 - 시각화된 구조를 바탕으로 작성한 html 코드
+
+```html
+...
+<body>
+
+  <main>
+    <h1>TODO LIST</h1>
+
+    <div>
+      <input type="text" placeholder="Write some to do ...">
+      <button>+</button>
+    </div>
+
+    <ul>
+      
+      <li>
+        <button></button>
+        <p>Solve Alogorithm Problem’s</p>
+      </li>
+
+      <li>
+        <button></button>
+        <p>Solve Alogorithm Problem’s</p>
+      </li>
+      
+    </ul>
+  </main>
+
+</body>
+...
+```
