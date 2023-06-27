@@ -249,3 +249,15 @@ id의 경우 앞에 # 를 붙여 작성한다.
 ...
 ```
 
+### select child
+특정 태그 혹은 class, id의 자식 요소를 특정하여 지정하는 방법이다.
+```css
+.parent .child {}
+
+#parent #child {}
+
+.paarent #child {}
+
+#parent .child {}
+...
+```
