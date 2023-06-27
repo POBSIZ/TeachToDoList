@@ -8,7 +8,7 @@
 ### HTML
 1. [Basic Tag](https://github.com/POBSIZ/TeachToDoList#html---basic-tag)
 2. [class & id](https://github.com/POBSIZ/TeachToDoList#html---class--id)
-3. [Structuring]()
+3. [Structuring](https://github.com/POBSIZ/TeachToDoList#html---structuring)
 
 ### CSS
 1. [Selector]()
@@ -212,3 +212,40 @@ html로 구조를 짜기 위해선 만들 페이지의 디자인을 보고 그�
 </body>
 ...
 ```
+
+## CSS - Selector
+css의 selector 즉 선택자는 html에서 작성한 tag 혹은 class, id를 지정하는 문법이다.
+
+### tag
+태그의 경우 태그명을 그대로 작성하면 된다.
+```css
+body {}
+
+main {}
+
+div {}
+...
+```
+
+### class
+클래스의 경우 클래스명 앞에 . 을 붙여 작성한다.
+```css
+.item {}
+
+.somthing {}
+
+.hello {}
+...
+```
+
+### id
+id의 경우 앞에 # 를 붙여 작성한다.
+```css
+#list {}
+
+#unique {}
+
+#only {}
+...
+```
+
