@@ -332,7 +332,9 @@ space-around: 교차 축 양쪽에 공간을 균등하게 분배하여 정렬.
 stretch: 교차 축을 채우기 위해 아이템들을 늘립니다 (기본값).   
   
 Flexbox를 사용하면 요소들을 쉽고 유연하게 배치할 수 있어 레이아웃 구성에 큰 도움이 됩니다.
-  
+
+![image](https://github.com/POBSIZ/TeachToDoList/assets/65818008/74fef42c-264d-464b-9d1b-10a33ff2ba7a)
+
   
   
 ## CSS - Append Style
