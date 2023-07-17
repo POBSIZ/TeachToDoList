@@ -11,9 +11,9 @@
 3. [Structuring](https://github.com/POBSIZ/TeachToDoList#html---structuring)
 
 ### CSS
-1. [Selector]()
-2. [Layout]()
-3. [Append Style]()
+1. [Selector](https://github.com/POBSIZ/TeachToDoList#css---selector)
+2. [Layout](https://github.com/POBSIZ/TeachToDoList#css---layout)
+3. [Append Style](https://github.com/POBSIZ/TeachToDoList#css---append-style)
 
 ### JAVASCRIPT
 1. [Define Variable & Function]()
@@ -283,6 +283,9 @@ id의 경우 앞에 # 를 붙여 작성한다.
 
 
 ## CSS - Layout
+CSS를 이용하여 HTML 요소들의 레이아웃을 바꾸어보자.
+
+### Flex
 flex는 Flexbox(Flexible Box) 레이아웃 모델을 지원하기 위한 속성입니다.  
 Flexbox는 요소들을 효율적으로 정렬하고 배치하기 위해 사용되며, 주로 컨테이너와 그 안에 있는 아이템들을 다루는 데에 적용됩니다.  
 Flexbox는 수평 정렬과 수직 정렬을 간편하게 수행하며, 요소들의 크기를 자동으로 조절하여 레이아웃을 유연하게 조정할 수 있습니다.  
@@ -292,46 +295,46 @@ Flexbox는 수평 정렬과 수직 정렬을 간편하게 수행하며, 요소�
 - **display: flex;**  
 Flexbox를 적용할 컨테이너를 지정합니다. 해당 속성을 선언한 요소는 Flex 컨테이너가 됩니다.
 
-- flex-direction
+- **flex-direction**
+Flex 아이템들의 배치 방향을 지정합니다.   
+row: 수평으로 왼쪽에서 오른쪽으로 배치 (기본값).  
+row-reverse: 수평으로 오른쪽에서 왼쪽으로 배치.  
+column: 수직으로 위에서 아래로 배치.  
+column-reverse: 수직으로 아래에서 위로 배치.  
 
-Flex 아이템들의 배치 방향을 지정합니다.
-row: 수평으로 왼쪽에서 오른쪽으로 배치 (기본값).
-row-reverse: 수평으로 오른쪽에서 왼쪽으로 배치.
-column: 수직으로 위에서 아래로 배치.
-column-reverse: 수직으로 아래에서 위로 배치.
-flex-wrap
+- **flex-wrap**
+Flex 아이템들이 한 줄에 모두 배치되지 않을 경우 줄 바꿈을 할 지 여부를 지정합니다.  
+nowrap: 한 줄에 모두 배치 (기본값).  
+wrap: 여러 줄에 걸쳐서 배치.  
 
-Flex 아이템들이 한 줄에 모두 배치되지 않을 경우 줄 바꿈을 할 지 여부를 지정합니다.
-nowrap: 한 줄에 모두 배치 (기본값).
-wrap: 여러 줄에 걸쳐서 배치.
-justify-content
+- **justify-content**
+Flex 아이템들을 주 축(main axis)을 따라 정렬합니다.  
+flex-start: 주 축 시작점에 정렬 (기본값).  
+flex-end: 주 축 끝점에 정렬.  
+center: 주 축 중앙에 정렬.  
+space-between: 주 축에 공간을 균등하게 분배하여 정렬.  
+space-around: 주 축 양쪽에 공간을 균등하게 분배하여 정렬.  
 
-Flex 아이템들을 주 축(main axis)을 따라 정렬합니다.
-flex-start: 주 축 시작점에 정렬 (기본값).
-flex-end: 주 축 끝점에 정렬.
-center: 주 축 중앙에 정렬.
-space-between: 주 축에 공간을 균등하게 분배하여 정렬.
-space-around: 주 축 양쪽에 공간을 균등하게 분배하여 정렬.
-align-items
+- **align-items**
+Flex 아이템들을 교차 축(cross axis)을 따라 정렬합니다.  
+flex-start: 교차 축 시작점에 정렬.  
+flex-end: 교차 축 끝점에 정렬.  
+center: 교차 축 중앙에 정렬.  
+stretch: 교차 축을 채우기 위해 아이템들을 늘립니다 (기본값).  
 
-Flex 아이템들을 교차 축(cross axis)을 따라 정렬합니다.
-flex-start: 교차 축 시작점에 정렬.
-flex-end: 교차 축 끝점에 정렬.
-center: 교차 축 중앙에 정렬.
-stretch: 교차 축을 채우기 위해 아이템들을 늘립니다 (기본값).
-align-content
-
-Flex 아이템들 사이의 간격을 교차 축을 따라 조절합니다. flex-wrap이 wrap으로 설정되어야만 동작합니다.
-flex-start: 교차 축 시작점에 정렬.
-flex-end: 교차 축 끝점에 정렬.
-center: 교차 축 중앙에 정렬.
-space-between: 교차 축에 공간을 균등하게 분배하여 정렬.
-space-around: 교차 축 양쪽에 공간을 균등하게 분배하여 정렬.
-stretch: 교차 축을 채우기 위해 아이템들을 늘립니다 (기본값).
+- **align-content**
+Flex 아이템들 사이의 간격을 교차 축을 따라 조절합니다. flex-wrap이 wrap으로 설정되어야만 동작합니다.  
+flex-start: 교차 축 시작점에 정렬.  
+flex-end: 교차 축 끝점에 정렬.  
+center: 교차 축 중앙에 정렬.  
+space-between: 교차 축에 공간을 균등하게 분배하여 정렬.  
+space-around: 교차 축 양쪽에 공간을 균등하게 분배하여 정렬.  
+stretch: 교차 축을 채우기 위해 아이템들을 늘립니다 (기본값).   
+  
 Flexbox를 사용하면 요소들을 쉽고 유연하게 배치할 수 있어 레이아웃 구성에 큰 도움이 됩니다.
-
-
-
+  
+  
+  
 ## CSS - Append Style
 css의 몇가지 스타일 속성들에 대해 알아보자
 
