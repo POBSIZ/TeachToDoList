@@ -26,6 +26,7 @@
   
   
   
+
 ## HTML - Basic Tag
 
 ### head
@@ -133,6 +134,9 @@ html 문서의 핵심 부분이며 이곳에 우리가 만들 페이지들에 �
 <button onclick="foo()">Click!</button>
 ```
 
+
+
+
 ## HTML - class & id
 class 와 id는 태그들을 식별 할 수 있는 이름을 붙이기 위해 사용된다.
 이름을 붙이는 이유는 JS 혹은 CSS에서 class 또는 id명으로 객체를 지정해 스타일과 기능들을 지정하기 위해서이다.
@@ -166,6 +170,9 @@ id는 한 태그에만 지정 할 수 있다.
 </main>
 ...
 ```
+
+
+
 
 ## HTML - Structuring
 html로 구조를 짜기 위해선 만들 페이지의 디자인을 보고 그에 맞춰 짜야한다.
@@ -212,6 +219,9 @@ html로 구조를 짜기 위해선 만들 페이지의 디자인을 보고 그�
 </body>
 ...
 ```
+
+
+
 
 ## CSS - Selector
 css의 selector 즉 선택자는 html에서 작성한 tag 혹은 class, id를 지정하는 문법이다.
@@ -266,5 +276,99 @@ id의 경우 앞에 # 를 붙여 작성한다.
 연결된 HTML 파일의 모든 요소를 지정하는 방법이다.
 ```css
 * {}
+...
+```
+
+
+
+
+## CSS - Layout
+flex는 Flexbox(Flexible Box) 레이아웃 모델을 지원하기 위한 속성입니다.  
+Flexbox는 요소들을 효율적으로 정렬하고 배치하기 위해 사용되며, 주로 컨테이너와 그 안에 있는 아이템들을 다루는 데에 적용됩니다.  
+Flexbox는 수평 정렬과 수직 정렬을 간편하게 수행하며, 요소들의 크기를 자동으로 조절하여 레이아웃을 유연하게 조정할 수 있습니다.  
+
+### Flexbox의 속성
+
+- **display: flex;**  
+Flexbox를 적용할 컨테이너를 지정합니다. 해당 속성을 선언한 요소는 Flex 컨테이너가 됩니다.
+
+- flex-direction
+
+Flex 아이템들의 배치 방향을 지정합니다.
+row: 수평으로 왼쪽에서 오른쪽으로 배치 (기본값).
+row-reverse: 수평으로 오른쪽에서 왼쪽으로 배치.
+column: 수직으로 위에서 아래로 배치.
+column-reverse: 수직으로 아래에서 위로 배치.
+flex-wrap
+
+Flex 아이템들이 한 줄에 모두 배치되지 않을 경우 줄 바꿈을 할 지 여부를 지정합니다.
+nowrap: 한 줄에 모두 배치 (기본값).
+wrap: 여러 줄에 걸쳐서 배치.
+justify-content
+
+Flex 아이템들을 주 축(main axis)을 따라 정렬합니다.
+flex-start: 주 축 시작점에 정렬 (기본값).
+flex-end: 주 축 끝점에 정렬.
+center: 주 축 중앙에 정렬.
+space-between: 주 축에 공간을 균등하게 분배하여 정렬.
+space-around: 주 축 양쪽에 공간을 균등하게 분배하여 정렬.
+align-items
+
+Flex 아이템들을 교차 축(cross axis)을 따라 정렬합니다.
+flex-start: 교차 축 시작점에 정렬.
+flex-end: 교차 축 끝점에 정렬.
+center: 교차 축 중앙에 정렬.
+stretch: 교차 축을 채우기 위해 아이템들을 늘립니다 (기본값).
+align-content
+
+Flex 아이템들 사이의 간격을 교차 축을 따라 조절합니다. flex-wrap이 wrap으로 설정되어야만 동작합니다.
+flex-start: 교차 축 시작점에 정렬.
+flex-end: 교차 축 끝점에 정렬.
+center: 교차 축 중앙에 정렬.
+space-between: 교차 축에 공간을 균등하게 분배하여 정렬.
+space-around: 교차 축 양쪽에 공간을 균등하게 분배하여 정렬.
+stretch: 교차 축을 채우기 위해 아이템들을 늘립니다 (기본값).
+Flexbox를 사용하면 요소들을 쉽고 유연하게 배치할 수 있어 레이아웃 구성에 큰 도움이 됩니다.
+
+
+
+## CSS - Append Style
+css의 몇가지 스타일 속성들에 대해 알아보자
+
+### width & height
+지정한 HTML 요소의 폭(width)과 높이(height)를 지정하는 속성이다.
+```css
+.box {
+  width: 100px;
+  height: 100px;
+}
+...
+```
+
+### margin & padding
+HTML 요소 주변의 공간(여백)을 조정하는데 사용되는 속성이다. 
+간단히 말해, 요소의 외부 영역을 제어하는데 쓰이며, 해당 요소와 다른 요소 사이의 간격을 조절하는 데 유용하다.
+
+- 하나의 값 : margin: 10px; - 네 방향의 마진이 모두 10px로 설정됩니다.
+- 두 개의 값: margin: 10px 20px; - 첫 번째 값은 위/아래(수직) 방향 마진을 설정하고, 두 번째 값은 왼쪽/오른쪽(수평) 방향 마진을 설정합니다.
+- 세 개의 값: margin: 10px 20px 30px; - 첫 번째 값은 위 방향, 두 번째 값은 왼쪽/오른쪽 방향, 세 번째 값은 아래 방향 마진을 설정합니다.
+- 네 개의 값: margin: 10px 20px 30px 40px; - 시계 방향으로 위, 오른쪽, 아래, 왼쪽 방향의 마진을 설정합니다.
+
+```css
+.box1 {
+  margin: 10px;
+}
+
+.box2 {
+  margin: 10px 20px;
+}
+
+.box3 {
+  margin: 10px 20px 30px;
+}
+
+.box4 {
+  margin: 10px 20px 30px 40px;
+}
 ...
 ```
